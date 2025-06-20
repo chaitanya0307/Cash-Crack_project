@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cash Crack App 💸</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>💸 Cash Crack</h1>
+    <nav>
+      <ul>
+        <li><a href="#split">Split</a></li>
+        <li><a href="#friends">Friends</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#" onclick="openInstructions()"target="_blank">Instructions</a></li>
+        <li><a href="#" onclick="openAbout()"target="_blank">About</a></li>
+        <li><a href="#" onclick="toggleLogin()" id="authLink">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--  Split Section -->
+  <section id="split">
+    <h2>Split an Expense</h2>
+    <input type="text" id="payer" placeholder="Who paid?">
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="text" id="participants" placeholder="Comma-separated names (e.g., John, Jane)">
+    <button onclick="splitExpense()">Split</button>
+    <div id="result"></div>
+  </section>
+
+  <!--  Friends Section -->
+  <section id="friends">
+    <h2>Friends</h2>
+    <input type="text" id="newFriend" placeholder="Add friend name">
+    <button onclick="addFriend()">Add</button>
+    <ul id="friendList"></ul>
+  </section>
+
+  <!--  History Section -->
+  <section id="history">
+    <h2>Expense History</h2>
+    <ul id="historyList"></ul>
+  </section>
+
+  
+
+  <footer>
+    <p>© 2025 Expense Splitter. Built with precision, shared with friends.</p>
+  </footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleLogin()">&times;</span>
+    <h3>Login</h3>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="loginUser()">Sign In</button>
+  </div>
+</div>
+
+<!-- User Info Bar -->
+<div id="userInfo" class="user-info">
+  <p id="welcomeMsg">Welcome!</p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
