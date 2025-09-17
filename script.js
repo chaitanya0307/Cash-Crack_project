@@ -3,7 +3,6 @@ let friends = [];
 
 // Logged-in user
 let currentUser = "";
-
 // Modal Toggle
 function toggleLogin() {
   const modal = document.getElementById("loginModal");
@@ -228,3 +227,4 @@ function openInstructions() {
   `);
   instructionsWindow.document.close();
 }
+
